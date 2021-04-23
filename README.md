@@ -32,9 +32,6 @@ List the dependencies of the Analysis-functionality.
 4. PDF created can access correct storage location
 5. Notification is sent to required and correct stakeholders/responsibles
 
-
-(add more if needed)
-
 ### Mark the System Boundary
 
 What is included in the software unit-test? What is not? Fill this table.
@@ -61,8 +58,7 @@ Add to these tests:
 5. Write "Notification sent to [recipient name]" to the console when new PDF report available
 6. Write "Error Opening File" to the PDF when CSV file not accessible in server 
 7. Write "File Error" on to the console when PDF file/storage not accessible
-8.  
-(add more)
+
 
 ### Recognize Fakes and Reality
 
@@ -74,8 +70,8 @@ Enter one part that's real and another part that's faked/mocked.
 |--------------------------|--------------|-----------------------------|---
 Read input from server     | csv file     | internal data-structure     | Fake the server store
 Validate input             | csv data     | valid / invalid             | None - it's a pure function
-Notify report availability | pdf generation function call | _enter output               | _enter fake or mock
-Report inaccessible server | _enter input | _enter output               | _enter fake or mock
-Find minimum and maximum   | _enter input | _enter output               | _enter fake or mock
-Detect trend               | _enter input | _enter output               | _enter fake or mock
-Write to PDF               | _enter input | _enter output               | _enter fake or mock
+Notify report availability | pdf generation function call |notification sent/ internal data structure              | mock
+Report inaccessible server | csv file |accessible/inaccessible             | None - pure function
+Find minimum and maximum   | csv data | min/max              |None - pure function
+Detect trend               |csv data | date&time of upward trend               | None - pure function
+Write to PDF               |report of trend, min, max, no. of breaches |internal data-structure               | Fake the PDF file
