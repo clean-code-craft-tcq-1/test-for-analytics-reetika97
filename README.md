@@ -58,7 +58,7 @@ Add to these tests:
 5. Write "Notification sent to [recipient name]" to the console when new PDF report available
 6. Write "Error Opening File" to the PDF when CSV file not accessible in server 
 7. Write "File Error" on to the console when PDF file/storage not accessible
-
+8. Write "PDF report missed" on to console when PDF generation is missed for the week.
 
 ### Recognize Fakes and Reality
 
