@@ -27,8 +27,10 @@ Notification must be sent when a new report is available.
 List the dependencies of the Analysis-functionality.
 
 1. Access to the Server containing the telemetrics in a csv file
-1. _enter dependency
-1. _enter dependency
+2. Data in CSV is of required format, i.e, ensure the writing operation to CSV file is done correctly 
+3. PDF created can access correct storage location
+4. Notification is sent to required and correct stakeholders/responsibles
+5. Read correct CSV file/ is in readable
 
 (add more if needed)
 
