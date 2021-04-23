@@ -43,12 +43,12 @@ What is included in the software unit-test? What is not? Fill this table.
 |---------------------------|---------------|---
 Battery Data-accuracy       | No            | We do not test the accuracy of data
 Computation of maximum      | Yes           | This is part of the software being developed
-Off-the-shelf PDF converter | _enter Yes/No | _enter reasoning
-Counting the breaches       | _enter Yes/No | _enter reasoning
-Detecting trends            | _enter Yes/No | _enter reasoning
-Notification utility        | _enter Yes/No | _enter reasoning
+Off-the-shelf PDF converter | No            | This is a third party software, we can only ensure data we are sending is correct
+Counting the breaches       | Yes           | This is part of the software being developed
+Detecting trends            | Yes           | This is part of the software being developed
+Notification utility        | No            | Only Notification generated for new report available is tested, utility is not tested
 
-### List the Test Cases
+### List the Test Cases 
 
 Write tests in the form of `<expected output or action>` from `<input>` / when `<event>`
 
