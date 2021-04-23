@@ -30,7 +30,7 @@ List the dependencies of the Analysis-functionality.
 2. Data in CSV is of required format, i.e, ensure the writing operation to CSV file is done correctly 
 3. PDF created can access correct storage location
 4. Notification is sent to required and correct stakeholders/responsibles
-5. Read correct CSV file/ is in readable
+5. Read correct CSV file/ is in readable condition
 
 (add more if needed)
 
