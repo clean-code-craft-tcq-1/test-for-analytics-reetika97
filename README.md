@@ -28,9 +28,10 @@ List the dependencies of the Analysis-functionality.
 
 1. Access to the Server containing the telemetrics in a csv file
 2. Data in CSV is of required format, i.e, ensure the writing operation to CSV file is done correctly 
-3. PDF created can access correct storage location
-4. Notification is sent to required and correct stakeholders/responsibles
-5. Read correct CSV file/ is in readable condition
+3. Read correct CSV file/ is in readable condition
+4. PDF created can access correct storage location
+5. Notification is sent to required and correct stakeholders/responsibles
+
 
 (add more if needed)
 
