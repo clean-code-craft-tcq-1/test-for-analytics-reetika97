@@ -27,10 +27,10 @@ Notification must be sent when a new report is available.
 List the dependencies of the Analysis-functionality.
 
 1. Access to the Server containing the telemetrics in a csv file
-1. _enter dependency
-1. _enter dependency
-
-(add more if needed)
+2. Data in CSV is of required format, i.e, ensure the writing operation to CSV file is done correctly 
+3. Read correct CSV file/ is in readable condition
+4. PDF created can access correct storage location
+5. Notification is sent to required and correct stakeholders/responsibles
 
 ### Mark the System Boundary
 
@@ -40,23 +40,25 @@ What is included in the software unit-test? What is not? Fill this table.
 |---------------------------|---------------|---
 Battery Data-accuracy       | No            | We do not test the accuracy of data
 Computation of maximum      | Yes           | This is part of the software being developed
-Off-the-shelf PDF converter | _enter Yes/No | _enter reasoning
-Counting the breaches       | _enter Yes/No | _enter reasoning
-Detecting trends            | _enter Yes/No | _enter reasoning
-Notification utility        | _enter Yes/No | _enter reasoning
+Off-the-shelf PDF converter | No            | This is a third party software, we can only ensure data we are sending is correct
+Counting the breaches       | Yes           | This is part of the software being developed
+Detecting trends            | Yes           | This is part of the software being developed
+Notification utility        | No            | Only Notification generated for new report available is tested, utility is not tested
 
-### List the Test Cases
+### List the Test Cases 
 
 Write tests in the form of `<expected output or action>` from `<input>` / when `<event>`
 
 Add to these tests:
 
 1. Write minimum and maximum to the PDF from a csv containing positive and negative readings
-1. Write "Invalid input" to the PDF when the csv doesn't contain expected data
-1. _enter a test
-1. _enter a test
-
-(add more)
+2. Write "Invalid input" to the PDF when the csv doesn't contain expected data
+3. Write number of breaches to the PDF from a csv conatining readings when threshold is crossed
+4. Write date&time to the PDF from a csv conatining readings when continuous upward trend is seen
+5. Write "Notification sent to [recipient name]" to the console when new PDF report available
+6. Write "Error Opening File" to the PDF when CSV file not accessible in server 
+7. Write "File Error" on to the console when PDF file/storage not accessible
+8. Write "PDF report missed" on to console when PDF generation is missed for the week.
 
 ### Recognize Fakes and Reality
 
@@ -68,8 +70,8 @@ Enter one part that's real and another part that's faked/mocked.
 |--------------------------|--------------|-----------------------------|---
 Read input from server     | csv file     | internal data-structure     | Fake the server store
 Validate input             | csv data     | valid / invalid             | None - it's a pure function
-Notify report availability | _enter input | _enter output               | _enter fake or mock
-Report inaccessible server | _enter input | _enter output               | _enter fake or mock
-Find minimum and maximum   | _enter input | _enter output               | _enter fake or mock
-Detect trend               | _enter input | _enter output               | _enter fake or mock
-Write to PDF               | _enter input | _enter output               | _enter fake or mock
+Notify report availability | pdf generation function call |notification sent/ internal data structure              | mock
+Report inaccessible server | csv file |accessible/inaccessible             | None - pure function
+Find minimum and maximum   | csv data | min/max              |None - pure function
+Detect trend               |csv data | date&time of upward trend               | None - pure function
+Write to PDF               |report of trend, min, max, no. of breaches |internal data-structure               | Fake the PDF file
