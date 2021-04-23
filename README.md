@@ -56,9 +56,12 @@ Add to these tests:
 
 1. Write minimum and maximum to the PDF from a csv containing positive and negative readings
 2. Write "Invalid input" to the PDF when the csv doesn't contain expected data
-3. Write 
-1. _enter a test
-
+3. Write number of breaches to the PDF from a csv conatining readings when threshold is crossed
+4. Write date&time to the PDF from a csv conatining readings when continuous upward trend is seen
+5. Write "Notification sent to [recipient name]" to the console when new PDF report available
+6. Write "Error Opening File" to the PDF when CSV file not accessible in server 
+7. Write "File Error" on to the console when PDF file/storage not accessible
+8.  
 (add more)
 
 ### Recognize Fakes and Reality
@@ -71,7 +74,7 @@ Enter one part that's real and another part that's faked/mocked.
 |--------------------------|--------------|-----------------------------|---
 Read input from server     | csv file     | internal data-structure     | Fake the server store
 Validate input             | csv data     | valid / invalid             | None - it's a pure function
-Notify report availability | _enter input | _enter output               | _enter fake or mock
+Notify report availability | pdf generation function call | _enter output               | _enter fake or mock
 Report inaccessible server | _enter input | _enter output               | _enter fake or mock
 Find minimum and maximum   | _enter input | _enter output               | _enter fake or mock
 Detect trend               | _enter input | _enter output               | _enter fake or mock
